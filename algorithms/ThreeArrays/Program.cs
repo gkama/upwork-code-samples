@@ -6,13 +6,4 @@ var arr1 = new [] { 1, 3, 2 };
 var arr2 = new [] { 5, 9, 7 };
 var arr3 = new [] { 11, 13, 15 };
 
-var totalArr = arr1.Union(arr2)
-    .ToArray()
-    .Union(arr3)
-    .ToArray();
-
-// First sort each one
-Array.Sort(totalArr);
-
-// Print
-for (int j = 0; j < totalArr.Length; j++) Console.WriteLine(totalArr[j]);
+Solutions.Enhanced(arr1, arr2, arr3);
