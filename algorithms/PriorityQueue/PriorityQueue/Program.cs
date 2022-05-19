@@ -22,13 +22,13 @@ var order2 = new Order { Id = 2, Name = "test-2", Importance = OrderImportances.
 var order3 = new Order { Id = 3, Name = "test-3" };
 var order4 = new Order { Id = 4, Name = "test-4", Importance = OrderImportances.Important };
 
-priorityQueueWithCustomComparer.Enqueue(order1, order1.Importance);
-priorityQueueWithCustomComparer.Enqueue(order2, order2.Importance);
-priorityQueueWithCustomComparer.Enqueue(order3, order3.Importance);
-priorityQueueWithCustomComparer.Enqueue(order4, order4.Importance);
+priorityQueueWithCustomComparer.Enqueue(order1, order1.Importance!);
+priorityQueueWithCustomComparer.Enqueue(order2, order2.Importance!);
+priorityQueueWithCustomComparer.Enqueue(order3, order3!.Importance!);
+priorityQueueWithCustomComparer.Enqueue(order4, order4.Importance!);
 
 Console.WriteLine("-----Customer comparer Priority Queue-----");
-while (priorityQueueWithCustomComparer.TryDequeue(out Order? item, out string priority))
+while (priorityQueueWithCustomComparer.TryDequeue(out Order? item, out var priority))
 {
     Console.WriteLine($"Popped Item : {item.Name}. Priority Was : {priority}");
 }
