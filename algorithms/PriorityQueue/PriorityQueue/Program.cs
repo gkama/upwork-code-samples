@@ -1,5 +1,5 @@
 ﻿using PriorityQueue.Core;
-
+/*
 // Priority queue with int comparer
 var priorityQueue = new PriorityQueue<Order, int>();
 
@@ -31,4 +31,7 @@ Console.WriteLine("-----Customer comparer Priority Queue-----");
 while (priorityQueueWithCustomComparer.TryDequeue(out Order? item, out var priority))
 {
     Console.WriteLine($"Popped Item : {item.Name}. Priority Was : {priority}");
-}
+}*/
+
+// Test
+Console.WriteLine(Solution.solution());
